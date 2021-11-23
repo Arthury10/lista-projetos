@@ -1,0 +1,29 @@
+/*global*/
+@import url('global/global.css');
+
+/*cores*/
+@import url('utilitarios/cores.css');
+
+/*tipografia*/
+@import url('utilitarios/tipografia.css');
+
+/*animação*/
+@import url('utilitarios/animacao.css');
+
+/*menu-hamburguer*/
+@import url('utilitarios/menu-hamburguer.css');
+
+/*darkmode*/
+@import url('utilitarios/darkmode.css');
+
+/*header*/
+@import url('global/header.css');
+
+/*creat*/
+@import url('creat-element/creat-elements.css');
+
+/*projetos*/
+@import url('portifolio/projetos.css');
+
+/*footer*/
+@import url('global/footer.css');

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lista de Projetos</title>
+		<link rel="stylesheet" href="src/css/style.css" />
+	</head>
+	<body>
+		<div class="creat-element-bg">
+			<div class="creat-projects container">
+				<h1 class="cor-2 texto">Cria sua lista de projetos</h1>
+				<div class="list-project">
+					<div class="uploud-img">
+						<div class="pull-img btnHome">
+							<input type="file" id="inImg" name="inImg" />
+							Selecionar Imagem
+						</div>
+						<img class="img-select" id="photo-preview" />
+					</div>
+					<form class="creat-project-description" id="frmAdicionar">
+						<input
+							type="text"
+							id="inTitle"
+							placeholder="Informe o título do projeto"
+						/>
+						<input
+							type="text"
+							id="inDescription"
+							placeholder="Informe a descrição do projeto"
+						/>
+						<input
+							type="text"
+							id="inLink"
+							placeholder="Informe o link do projeto"
+						/>
+            <input type="submit" id="btnCreate" class="btnHome" value="Criar Projeto">
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<section
+			data-anime="show-down"
+			id="mportifolio"
+			class="portifolio-bg tabsNav show-down"
+		>
+			<div class="section-portifolio container">
+				<h1 class="titulo">Projetos</h1>
+				<div class="carrousel" id="localList">
+					<div class="projetos">
+						<img
+							class="item-projeto"
+							src="assets/projetos/portfolio.png"
+							alt="Projeto-BikeCraft"
+							data-tilt
+						/>
+						<div class="projeto-description">
+							<h3 class="portTitle">arthury10.io</h3>
+							<p class="portText">
+								<span class="cor-2">></span> Página pessoal para
+								utilizar como portfólio.
+							</p>
+							<div class="tecnologia-usada-pack">
+								<p class="portText">
+									<span class="cor-2">></span> Tecnologias
+									usadas
+								</p>
+								<div class="tecnologias-usada">
+									<img
+										class="tecSkill"
+										src="assets/projetos/tecnologia/html5.svg"
+										alt="HTML"
+									/>
+									<img
+										class="tecSkill"
+										src="assets/projetos/tecnologia/css3.svg"
+										alt="CSS"
+									/>
+									<img
+										class="tecSkill"
+										src="assets/projetos/tecnologia/javascript.svg"
+										alt="CSS"
+									/>
+								</div>
+							</div>
+							<a class="btnProjeto" target="_blanck">VER NO GITHUB</a>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--scripts-->
+		<script type="module" src="src/js/script.js"></script>
+	</body>
+</html>

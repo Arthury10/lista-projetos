@@ -1,0 +1,141 @@
+.section-portifolio {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.section-portifolio .titulo {
+	color: var(--color-secondary);
+}
+
+.carrousel {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	padding-bottom: 1.5rem;
+}
+
+.section-portifolio .carrousel .projetos {
+	display: flex;
+	justify-content: space-around;
+	background: var(--color-primary-bg);
+	box-shadow: var(--color-secondary) 0px 10px 15px -5px;
+	border-radius: 30px;
+	gap: 2rem;
+}
+
+.projetos {
+	width: 100%;
+	padding: 20px 20px;
+}
+
+.projetos .item-projeto {
+	width: 100%;
+	width: 50rem;
+	border-radius: 30px;
+	height: auto;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.item-projeto:hover {
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	border: 2px solid var(--color-secondary);
+}
+.projeto-description {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	padding: 20px;
+	gap: 2rem;
+	width: 60%;
+	max-width: 40ch;
+}
+
+.projeto-description h3::after {
+	content: '';
+	display: block;
+	width: 32px;
+	height: 2px;
+	background: var(--color-secondary);
+}
+
+.projeto-description p {
+	color: var(--color-text-secondary);
+}
+
+.tecnologia-usada-pack {
+	display: flex;
+	justify-content: start;
+	align-items: flex-start;
+	gap: 1rem;
+	flex-direction: column;
+}
+
+.tecSkill {
+	width: 46px;
+	height: 46px;
+}
+
+.btnProjeto {
+	width: 100%;
+	border: 1px solid var(--color-secondary);
+	padding: 20px 0;
+	text-align: center;
+	color: var(--color-text-secondary);
+	transition: 0.5s all;
+}
+
+.btnProjeto:hover {
+	width: 100%;
+	border: 1px solid var(--color-secondary);
+	padding: 20px 0;
+	text-align: center;
+	color: var(--color-primary);
+	font-weight: bold;
+	background: var(--color-secondary);
+}
+
+@media screen and (max-width: 1140px) {
+	.section-portifolio .carrousel .projetos {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.projetos .item-projeto {
+		width: 100%;
+		height: auto;
+		background: var(--color-primary-bg);
+	}
+
+	.projetos .item-projeto img {
+		border-radius: 4px;
+	}
+
+	.projeto-description {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.projeto-description {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+		padding: 20px;
+		gap: 2rem;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.tecnologia-usada-pack {
+		display: flex;
+		justify-content: left;
+		gap: 1rem;
+		flex-direction: column;
+	}
+}
