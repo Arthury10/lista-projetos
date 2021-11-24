@@ -30,8 +30,12 @@
 }
 
 .projetos .item-projeto {
+	background: var(--color-secondary);
 	width: 100%;
-	width: 50rem;
+	max-width: 50rem;
+	max-height: 521px;
+	height: 100%;
+	object-fit: contain;
 	border-radius: 30px;
 	height: auto;
 	-moz-transition: all 0.5s;
@@ -43,7 +47,7 @@
 	-moz-transform: scale(1.2);
 	-webkit-transform: scale(1.2);
 	transform: scale(1.2);
-	border: 2px solid var(--color-secondary);
+	border: 3px solid var(--color-secondary);
 }
 .projeto-description {
 	display: flex;

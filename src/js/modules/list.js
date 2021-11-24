@@ -58,6 +58,8 @@ export default function list() {
 		if (title.length > 0 && description.length > 0 && link.length > 0) {
 			localList.innerHTML += novaLista(title, description, link)
 			frmAdicionar.reset() // limpa o form
+			//remova os dados do input file
+			imgList.src = ''
 		}
 	})
 
