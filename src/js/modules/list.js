@@ -5,10 +5,8 @@ export default function list() {
 	//pegar imagem do input file já carregada
 	const imgList = document.querySelector('#photo-preview')
 
-	const projetos = document.querySelectorAll('.projetos')
-
 	//nova lista
-	const novaLista = (title, description, link) => {
+	const novaLista = (title, description, imgHtml, imgCss, imgJs, link) => {
 		const html = `<div class="projetos">
   <img
     class="item-projeto"
@@ -26,21 +24,9 @@ export default function list() {
         usadas
       </p>
       <div class="tecnologias-usada">
-        <img
-          class="tecSkill"
-          src="assets/projetos/tecnologia/html5.svg"
-          alt="HTML"
-        />
-        <img
-          class="tecSkill"
-          src="assets/projetos/tecnologia/css3.svg"
-          alt="CSS"
-        />
-        <img
-          class="tecSkill"
-          src="assets/projetos/tecnologia/javascript.svg"
-          alt="CSS"
-        />
+        ${imgHtml}
+				${imgCss}
+				${imgJs}
       </div>
     </div>
     <a class="btnProjeto" target="_blanck" href="${link}">VER NO GITHUB</a>
@@ -58,9 +44,26 @@ export default function list() {
 		const title = frmAdicionar.inTitle.value.trim()
 		const description = frmAdicionar.inDescription.value.trim()
 		const link = frmAdicionar.inLink.value.trim()
+		//quando o inHtml estiver selecionado pega a imagem do checkbox
+		const imgHtml = frmAdicionar.inHtml.checked
+			? `<img src="assets/projetos/tecnologia/html5.svg" />`
+			: ''
+		const imgCss = frmAdicionar.inCss.checked
+			? `<img src="assets/projetos/tecnologia/css3.svg" />`
+			: ''
+		const imgJs = frmAdicionar.inJs.checked
+			? `<img src="assets/projetos/tecnologia/javascript.svg" />`
+			: ''
 
 		if (title.length > 0 && description.length > 0 && link.length > 0) {
-			localList.innerHTML += novaLista(title, description, link)
+			localList.innerHTML += novaLista(
+				title,
+				description,
+				imgHtml,
+				imgCss,
+				imgJs,
+				link
+			)
 			frmAdicionar.reset() // limpa o form
 			//remova os dados do input file
 			imgList.src = ''
