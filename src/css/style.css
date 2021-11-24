@@ -11,7 +11,7 @@
 @import url('global/load.css');
 
 /*darkmode*/
-@import url('utilitarios/darkmode.css');
+@import url('utilitarios/inputColor.css');
 
 /*inputCheckbox*/
 @import url('utilitarios/inputCheckbox.css');
