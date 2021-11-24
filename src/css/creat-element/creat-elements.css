@@ -6,6 +6,7 @@
 	background: var(--color-primary-bg);
 	box-shadow: var(--color-secondary) 0px 10px 15px -5px;
 	border-radius: 30px;
+	width: 100%;
 }
 
 .list-project {
@@ -61,7 +62,7 @@
 
 .creat-project-description {
 	align-items: center;
-	width: auto;
+	width: 40%;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
@@ -79,10 +80,14 @@
 }
 
 @media screen and (max-width: 1080px) {
+	.creat-project-description {
+		width: 60%;
+	}
 	.list-project {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		gap: 1rem;
 	}
 	.creat-projects .texto {
 		font-size: 3rem;

@@ -1,8 +1,11 @@
 export default function list() {
 	const btCriar = document.querySelector('#btnCreate')
+	const btDeletar = document.querySelectorAll('.btnDelete')
 	const localList = document.querySelector('#localList')
 	//pegar imagem do input file já carregada
 	const imgList = document.querySelector('#photo-preview')
+
+	const projetos = document.querySelectorAll('.projetos')
 
 	//nova lista
 	const novaLista = (title, description, link) => {
@@ -13,6 +16,7 @@ export default function list() {
   />
   <div class="projeto-description">
     <h3 class="portTitle">${title}</h3>
+		<h1 class="btnDelete">X</h1>
     <p class="portText">
       <span class="cor-2">></span> ${description}
     </p>
@@ -79,14 +83,20 @@ export default function list() {
 		localStorage.setItem('listaProject', listaProjetos)
 	})
 
-	// evento que ocorre quando a página é carregada
+	//deletar item da lista
+	localList.addEventListener('click', e => {
+		if (e.target.className === 'btnDelete') {
+			e.target.parentElement.parentElement.remove()
+		}
+	})
+
+	//carregar lista do localStorage
 	window.addEventListener('load', () => {
-		// verifica se existe algum item no localStorage
-		// se houver dados salvos em localStorage
-		if (localStorage.getItem('listaProject')) {
-			const dados = localStorage.getItem('listaProject').split(';')
-			for (let dado of dados) {
-				localList.innerHTML += novaLista(dado)
+		const listaProjetos = localStorage.getItem('listaProject')
+		if (listaProjetos) {
+			const lista = listaProjetos.split(';')
+			for (item of lista) {
+				localList.innerHTML += item
 			}
 		}
 	})

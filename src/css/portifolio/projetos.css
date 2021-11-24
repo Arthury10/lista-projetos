@@ -27,6 +27,7 @@
 .projetos {
 	width: 100%;
 	padding: 20px 20px;
+	position: relative;
 }
 
 .projetos .item-projeto {
@@ -103,6 +104,18 @@
 	background: var(--color-secondary);
 }
 
+.btnDelete {
+	position: absolute;
+	top: -40px;
+	right: -40px;
+	background: var(--color-secondary);
+	border-radius: 50%;
+	padding: 20px 30px;
+	font-size: 2.5rem;
+	cursor: pointer;
+	box-shadow: 0px 0px 10px -5px var(--color-secondary);
+}
+
 @media screen and (max-width: 1140px) {
 	.section-portifolio .carrousel .projetos {
 		flex-direction: column;
@@ -141,5 +154,16 @@
 		justify-content: left;
 		gap: 1rem;
 		flex-direction: column;
+	}
+	.btnDelete {
+		position: absolute;
+		top: -20px;
+		right: -20px;
+		background: var(--color-secondary);
+		border-radius: 50%;
+		padding: 10px 15px;
+		font-size: 1.5rem;
+		cursor: pointer;
+		box-shadow: 0px 0px 10px -5px var(--color-secondary);
 	}
 }
