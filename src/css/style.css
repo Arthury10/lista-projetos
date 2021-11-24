@@ -10,11 +10,11 @@
 /*load*/
 @import url('global/load.css');
 
-/*inputCheckbox*/
-@import url('utilitarios/inputCheckbox.css');
-
 /*darkmode*/
 @import url('utilitarios/darkmode.css');
+
+/*inputCheckbox*/
+@import url('utilitarios/inputCheckbox.css');
 
 /*creat*/
 @import url('creat-element/creat-elements.css');
