@@ -72,5 +72,20 @@ export default function list() {
 			lista += item.innerHTML + ';'
 		}
 		const listaProjetos = lista.slice(0, -1)
+
+		//salvar lista no localStorage
+		localStorage.setItem('listaProject', listaProjetos)
+	})
+
+	// evento que ocorre quando a página é carregada
+	window.addEventListener('load', () => {
+		// verifica se existe algum item no localStorage
+		// se houver dados salvos em localStorage
+		if (localStorage.getItem('listaProject')) {
+			const dados = localStorage.getItem('listaProject').split(';')
+			for (let dado of dados) {
+				localList.innerHTML += novaLista(dado)
+			}
+		}
 	})
 }
