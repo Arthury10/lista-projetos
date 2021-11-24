@@ -14,6 +14,14 @@
 	position: relative;
 }
 
+.title-projects {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	position: relative;
+}
+
 .create-projects-bg .texto {
 	text-align: center;
 }
