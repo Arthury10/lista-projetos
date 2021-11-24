@@ -7,20 +7,14 @@
 /*tipografia*/
 @import url('utilitarios/tipografia.css');
 
+/*load*/
+@import url('global/load.css');
+
 /*inputCheckbox*/
 @import url('utilitarios/inputCheckbox.css');
 
-/*animação*/
-@import url('utilitarios/animacao.css');
-
-/*menu-hamburguer*/
-@import url('utilitarios/menu-hamburguer.css');
-
 /*darkmode*/
 @import url('utilitarios/darkmode.css');
-
-/*header*/
-@import url('global/header.css');
 
 /*creat*/
 @import url('creat-element/creat-elements.css');

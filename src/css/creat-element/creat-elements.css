@@ -11,6 +11,11 @@
 	box-shadow: var(--color-secondary) 0px 10px 15px -5px;
 	padding: 2rem 2rem;
 	border-radius: 30px;
+	position: relative;
+}
+
+.create-projects-bg .texto {
+	text-align: center;
 }
 
 .list-project {
@@ -77,6 +82,7 @@
 }
 
 .creat-project-description input {
+	border: 0;
 	width: 100%;
 	font-size: 1.5rem;
 	padding: 1rem 1rem;
