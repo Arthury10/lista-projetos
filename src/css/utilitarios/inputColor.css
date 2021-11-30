@@ -1,6 +1,7 @@
 .darkMode {
 	position: absolute;
-	right: 0;
+	top: 20px;
+	right: 30px;
 	background: var(--color-primary-bg);
 	transition: opacity 0.2s linear;
 }
@@ -50,8 +51,8 @@ body.light .header-bg {
 @media screen and (max-width: 860px) {
 	.darkMode {
 		position: absolute;
-		right: 0;
-		top: 60px;
+		top: 20px;
+		right: 30px;
 	}
 	.label {
 		height: 15px;

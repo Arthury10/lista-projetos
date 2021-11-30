@@ -124,6 +124,9 @@
 	padding: 0.5rem 0.5rem;
 	border-radius: 10px;
 	margin-left: 70%;
+	border: 2px solid var(--color-secondary);
+	font-size: 1.5rem;
+	font-weight: bold;
 }
 
 #search:focus {
@@ -172,5 +175,19 @@
 		justify-content: left;
 		gap: 1rem;
 		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 870px) {
+	#search {
+		width: 50%;
+		margin-left: 25%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#search {
+		width: 80%;
+		margin-left: 10%;
 	}
 }

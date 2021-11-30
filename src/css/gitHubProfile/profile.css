@@ -12,11 +12,12 @@
 	justify-content: center;
 	align-items: flex-start;
 	flex-wrap: wrap;
-	gap: 5rem;
+	gap: 2rem;
 }
 
-.search-profile img {
-	max-width: 400px;
+.search-profile svg {
+	width: 200px;
+	height: 200px;
 }
 
 .container-profile {
@@ -38,6 +39,7 @@
 	font-weight: bold;
 	border: 0;
 	height: 52px;
+	font-size: 1.25rem;
 }
 
 .procurar-search:hover {
@@ -143,10 +145,21 @@
 }
 
 @media screen and (max-width: 700px) {
+	.container-profile {
+		width: 90%;
+	}
 	.card {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+	}
+	.procurar-search {
+		font-size: 0.875rem;
+		height: 47px;
+	}
+	#userName {
+		width: 70%;
+		font-size: 1.25rem;
 	}
 }
 
@@ -160,6 +173,14 @@
 	}
 
 	.container-profile {
-		width: 90%;
+		width: 95%;
+	}
+
+	.section-search .subtitulo {
+		font-size: 4rem;
+	}
+
+	.section-search .subtexto {
+		font-size: 1.5rem;
 	}
 }

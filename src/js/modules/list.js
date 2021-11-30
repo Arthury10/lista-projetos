@@ -37,8 +37,8 @@ export default function list() {
 					resultado.innerHTML = ''
 					localList.innerHTML = ''
 					resultado.innerHTML = `
-			<span class="btn-delete">X</span>
-				<a href="https://github.com/${user}" target="_blanck" class="card">
+					<span class="btn-delete">X</span>
+					<a href="https://github.com/${user}" target="_blanck" class="card">
             <img src="${avatar_url}" alt="${name}" class="img-avatar">
             <div class="card-body">
 						<div class="dados-principal">
@@ -49,7 +49,7 @@ export default function list() {
                 <p class="card-text">${followers} Seguidores</p>
                 <p class="card-text">Seguindo ${following}</p>
             </div>
-        </a>
+        	</a>
 				`
 
 					fetch(`https://api.github.com/users/${user}/repos`)
