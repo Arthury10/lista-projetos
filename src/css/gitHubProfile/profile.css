@@ -1,0 +1,165 @@
+.section-search {
+	padding: 20px 20px;
+}
+
+.section-search .subtitulo {
+	text-align: center;
+}
+
+.search-profile {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 5rem;
+}
+
+.search-profile img {
+	max-width: 400px;
+}
+
+.container-profile {
+	width: 40%;
+}
+
+.profile-container {
+	display: flex;
+	align-items: center;
+}
+
+.procurar-search {
+	width: 30%;
+	background: var(--color-secondary);
+	padding: 15px 20px;
+	cursor: pointer;
+	border-radius: 0px 4px 4px 0px;
+	color: white;
+	font-weight: bold;
+	border: 0;
+	height: 48px;
+}
+
+.procurar-search:hover {
+	background: var(--color-extra2);
+}
+
+.resultado {
+	position: relative;
+}
+
+.btn-delete {
+	position: absolute;
+	right: -20px;
+	top: -10px;
+	background: var(--color-secondary);
+	padding: 10px 18px;
+	cursor: pointer;
+	color: white;
+	font-weight: bold;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+#userName {
+	width: 70%;
+	font-size: 1.5rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 4px 0px 0px 4px;
+	padding: 10px 10px;
+	color: var(--color-check);
+	background: var(--color-text-secondary);
+}
+
+#userName:focus {
+	outline: none;
+}
+
+/*card*/
+.card {
+	border: 1px solid var(--color-text-secondary);
+	margin-top: 1rem;
+	transition: 0.3s;
+	width: 100%;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 20px 20px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	gap: 40px;
+	text-decoration: none;
+	position: relative;
+}
+
+.card:hover {
+	border: 1px solid var(--color-secondary);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card .img-avatar {
+	width: 100%;
+	max-width: 200px;
+	border-radius: 10px;
+}
+
+.dados-principal {
+	margin-bottom: 1rem;
+}
+
+.dados-principal {
+	color: --color-text-secondary;
+}
+
+.card-title {
+	color: var(--color-text-secondary);
+	font-weight: bold;
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+}
+
+.card-text {
+	color: var(--color-text-secondary);
+	font-size: 1rem;
+	margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1335px) {
+	.search-profile {
+		margin-top: 5rem;
+		align-items: center;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.search-profile img {
+		max-width: 350px;
+	}
+
+	.container-profile {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.card {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.section-search {
+		padding: 10px 10px;
+	}
+
+	.search-profile img {
+		max-width: 280px;
+	}
+
+	.container-profile {
+		width: 90%;
+	}
+}
