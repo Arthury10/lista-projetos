@@ -7,8 +7,6 @@ export default function list() {
 	const btnSearch = document.querySelector('#btnSearch')
 	const btnDelete = document.querySelector('.btn-delete')
 
-	//contar numero total de lista de projetos criado e sempre manter atualizado o numero de projetos criados
-
 	btnSearch.addEventListener('click', e => {
 		e.preventDefault()
 		const user = userName.value
@@ -133,7 +131,6 @@ export default function list() {
 				e.target.parentElement.remove()
 				//quando pesquisarmos outro profile, a lista de repos é limpa
 				localList.innerHTML = ''
-				contador.innerHTML = `Nenhum resultados encontrados`
 			}
 		})
 	}
