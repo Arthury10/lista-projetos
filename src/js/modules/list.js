@@ -6,7 +6,8 @@ export default function list() {
 	const resultado = document.querySelector('.resultado')
 	const btnSearch = document.querySelector('#btnSearch')
 	const btnDelete = document.querySelector('.btn-delete')
-	const contador = document.querySelector('.resultadoPesquisa')
+
+	//contar numero total de lista de projetos criado e sempre manter atualizado o numero de projetos criados
 
 	btnSearch.addEventListener('click', e => {
 		e.preventDefault()
@@ -37,8 +38,6 @@ export default function list() {
 					//sempre que pesquisarmos um usuario, limpa o resultado anterior e limpa o campo de pesquisa e a lista
 					resultado.innerHTML = ''
 					localList.innerHTML = ''
-					contador.innerHTML = `Nenhum resultados encontrados`
-
 					resultado.innerHTML = `
 					<span class="btn-delete">X</span>
 					<a href="https://github.com/${user}" target="_blanck" class="card">
@@ -60,8 +59,6 @@ export default function list() {
 						.then(data => {
 							data.forEach(repo => {
 								//contador de itens no repositorios
-								let contadorList = data.length
-								contador.innerHTML = `${contadorList} resultados encontrados`
 								const { name, description, html_url } = repo
 								const imgHtml =
 									repo.language !== 'HTML'
@@ -153,6 +150,7 @@ export default function list() {
 		if (description === null || description === undefined) {
 			description = 'Sem descrição'
 		}
+
 		//fazer verificação quando for null ou undefined mostrar uma imagem padrão
 		if (
 			imgList.src === null ||
@@ -260,6 +258,7 @@ export default function list() {
 				imgJs,
 				link
 			)
+
 			frmAdicionar.reset() // limpa o form
 			//remova os dados do input file
 			imgList.src = ''
@@ -276,10 +275,6 @@ export default function list() {
 		for (item of localList.children) {
 			lista += item.innerHTML + ';'
 		}
-		const listaProjetos = lista.slice(0, -1)
-
-		//salvar lista no localStorage
-		localStorage.setItem('listaProject', listaProjetos)
 	})
 
 	//deletar item da lista
@@ -307,16 +302,6 @@ export default function list() {
 			} else {
 				item.style.display = 'none'
 			}
-			//exibir numero de resultados encontrados na busca e ir atualizando o valor
-			let cont = 0
-			list.forEach(item => {
-				if (item.style.display === 'flex') {
-					cont++
-					contador.innerText = `${cont} resultados encontrados`
-				} else {
-					contador.innerText = `${cont} resultados encontrados`
-				}
-			})
 		})
 	})
 }
