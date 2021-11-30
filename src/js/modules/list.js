@@ -124,6 +124,8 @@ export default function list() {
 		resultado.addEventListener('click', e => {
 			if (e.target.classList.contains('btn-delete')) {
 				e.target.parentElement.remove()
+				//quando pesquisarmos outro profile, a lista de repos é limpa
+				localList.innerHTML = ''
 			}
 		})
 	}
