@@ -31,7 +31,7 @@ export default function list() {
 
 					setTimeout(() => {
 						resultado.innerHTML = ''
-					}, 1000)
+					}, 2000)
 				} else {
 					//sempre que pesquisarmos um usuario, limpa o resultado anterior e limpa o campo de pesquisa e a lista
 					resultado.innerHTML = ''
@@ -300,6 +300,18 @@ export default function list() {
 			} else {
 				item.style.display = 'none'
 			}
+			//exibir numero de resultados encontrados na busca e ir atualizando o valor
+			const contador = document.querySelector('.resultadoPesquisa')
+			let cont = 0
+			list.forEach(item => {
+				if (item.style.display === 'flex') {
+					cont++
+					contador.innerText = `${cont} resultados encontrados`
+				} else {
+					contador.innerText = `0 resultados encontrados`
+					contador.innerText = `${cont} resultados encontrados`
+				}
+			})
 		})
 	})
 }
