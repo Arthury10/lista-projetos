@@ -33,6 +33,9 @@ export default function list() {
 						resultado.innerHTML = ''
 					}, 1000)
 				} else {
+					//sempre que pesquisarmos um usuario, limpa o resultado anterior e limpa o campo de pesquisa e a lista
+					resultado.innerHTML = ''
+					localList.innerHTML = ''
 					resultado.innerHTML = `
 			<span class="btn-delete">X</span>
 				<a href="https://github.com/${user}" target="_blanck" class="card">
@@ -48,6 +51,7 @@ export default function list() {
             </div>
         </a>
 				`
+
 					fetch(`https://api.github.com/users/${user}/repos`)
 						.then(response => response.json())
 						.then(data => {
