@@ -6,6 +6,7 @@ export default function list() {
 	const resultado = document.querySelector('.resultado')
 	const btnSearch = document.querySelector('#btnSearch')
 	const btnDelete = document.querySelector('.btn-delete')
+	const contador = document.querySelector('.resultadoPesquisa')
 
 	btnSearch.addEventListener('click', e => {
 		e.preventDefault()
@@ -36,6 +37,8 @@ export default function list() {
 					//sempre que pesquisarmos um usuario, limpa o resultado anterior e limpa o campo de pesquisa e a lista
 					resultado.innerHTML = ''
 					localList.innerHTML = ''
+					contador.innerHTML = `Nenhum resultados encontrados`
+
 					resultado.innerHTML = `
 					<span class="btn-delete">X</span>
 					<a href="https://github.com/${user}" target="_blanck" class="card">
@@ -56,6 +59,9 @@ export default function list() {
 						.then(response => response.json())
 						.then(data => {
 							data.forEach(repo => {
+								//contador de itens no repositorios
+								let contadorList = data.length
+								contador.innerHTML = `${contadorList} resultados encontrados`
 								const { name, description, html_url } = repo
 								const imgHtml =
 									repo.language !== 'HTML'
@@ -130,6 +136,7 @@ export default function list() {
 				e.target.parentElement.remove()
 				//quando pesquisarmos outro profile, a lista de repos é limpa
 				localList.innerHTML = ''
+				contador.innerHTML = `Nenhum resultados encontrados`
 			}
 		})
 	}
@@ -301,14 +308,12 @@ export default function list() {
 				item.style.display = 'none'
 			}
 			//exibir numero de resultados encontrados na busca e ir atualizando o valor
-			const contador = document.querySelector('.resultadoPesquisa')
 			let cont = 0
 			list.forEach(item => {
 				if (item.style.display === 'flex') {
 					cont++
 					contador.innerText = `${cont} resultados encontrados`
 				} else {
-					contador.innerText = `0 resultados encontrados`
 					contador.innerText = `${cont} resultados encontrados`
 				}
 			})
