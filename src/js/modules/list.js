@@ -17,7 +17,7 @@ export default function list() {
 			imgList.src === undefined ||
 			imgList.src === ''
 		) {
-			imgList.src = '../../../assets/projetos/default.png'
+			imgList.src = '../../../assets/projetos/img-def.png'
 		}
 
 		const html = `<div class="projetos repo-list">
