@@ -17,12 +17,12 @@ export default function list() {
 			imgList.src === undefined ||
 			imgList.src === ''
 		) {
-			imgList.src = '../../../assets/projetos/img-def.png'
+			imgList.src = `assets/projetos/img-def.png` //imagem padrão
 		}
 
 		const html = `<div class="projetos repo-list">
   <img
-    class="item-projeto"
+    class="item-projeto"  
     src=${imgList.src}
   />
   <div class="projeto-description">
